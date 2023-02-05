@@ -63,6 +63,12 @@ button {
 .operator {
     background-color: #FF8F1F;    
 }
+
+.operator:focus {
+    background-color: #ffc183;
+}
+
+
 span{
     text-decoration: overline;
 }
@@ -70,13 +76,8 @@ span{
     background-color:crimson;
     font-weight: bold;
 }
-.new:active{
+.new:active, .new.operator:focus{
     background-color:rgb(216, 96, 120);
-}
-
-
-.operator:focus {
-    background-color: #ffc183;
 }
 
 .equals {

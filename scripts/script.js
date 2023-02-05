@@ -42,7 +42,10 @@ function clickButton() {
                 inputSign(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('radical')) {
-                squareRoot(displayValue);
+                squareRoot(displayValue); //this function is described further down
+                updateDisplay();
+            } else if(buttons[i].classList.contains('log')){
+                logBaseTen(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
@@ -150,8 +153,21 @@ function inputSign(num) {
     displayValue = (num * -1).toString();
 }
 
-function squareRoot(num){
+function exponent(x, y){ //returns x to the power of y
+    return Math.pow(x, y);
+}
+
+function squareRoot(num){ /*very simple, raises the input to the*/ 
+                        /*power of 0.5, effecively square rooting */
     displayValue = (Math.pow(num, 0.5).toString());
+}
+
+function logBaseTen(num){ //works just like the 'log' button on an actual calculator. Returns log(x) / log(10)
+    displayValue =(Math.log(num)/Math.log(10)).toString();
+}
+
+function modulo(x,y){ //modulo operation, divides x by y, then returns the remainder
+    return x%y;
 }
 
 function clearDisplay() {
@@ -175,8 +191,12 @@ function operate(x, y, op) {
         return x + y;
     } else if(op === '-') {
         return x - y;
-    } else if(op = '^'){
-        return Math.pow(x, y);
+    } 
+    else if(op === '^'){
+        return exponent(x, y);
+    }
+    else if(op === 'mod'){ //modulo operation. Divides x by y, then returns the remainder
+        return modulo(x, y);
     }
     else if(op === '*') {
         return x * y;
