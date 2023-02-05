@@ -41,6 +41,9 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
+            } else if(buttons[i].classList.contains('radical')) {
+                squareRoot(displayValue);
+                updateDisplay();
             } else if(buttons[i].classList.contains('clear'))
                 clearDisplay();
                 updateDisplay();
@@ -147,6 +150,10 @@ function inputSign(num) {
     displayValue = (num * -1).toString();
 }
 
+function squareRoot(num){
+    displayValue = (Math.pow(num, 0.5).toString());
+}
+
 function clearDisplay() {
     displayValue = '0';
     firstOperand = null;
@@ -168,7 +175,10 @@ function operate(x, y, op) {
         return x + y;
     } else if(op === '-') {
         return x - y;
-    } else if(op === '*') {
+    } else if(op = '^'){
+        return Math.pow(x, y);
+    }
+    else if(op === '*') {
         return x * y;
     } else if(op === '/') {
         if(y === 0) {

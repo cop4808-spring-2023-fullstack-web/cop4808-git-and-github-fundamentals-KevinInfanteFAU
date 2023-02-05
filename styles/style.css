@@ -30,13 +30,6 @@ h1{
     grid-template-rows: minmax(100px, auto) repeat(6, 80px);
     gap: 2px;
 }
-span{
-    text-decoration: overline;
-}
-.new{
-    background-color:crimson;
-    font-weight: bold;
-}
 
 #display {
     grid-column: 1 / -1;
@@ -70,6 +63,17 @@ button {
 .operator {
     background-color: #FF8F1F;    
 }
+span{
+    text-decoration: overline;
+}
+.new{
+    background-color:crimson;
+    font-weight: bold;
+}
+.new:active{
+    background-color:rgb(216, 96, 120);
+}
+
 
 .operator:focus {
     background-color: #ffc183;
