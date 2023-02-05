@@ -76,7 +76,11 @@ span{
     background-color:crimson;
     font-weight: bold;
 }
-.new:active, .new.operator:focus{
+.new:active, .new.operator:focus{ 
+/*for elements with the class new and the class operator, the
+ background color changes with the element is in focus. For 
+ elements with just the class new, background color changes 
+ when the element is activated*/
     background-color:rgb(216, 96, 120);
 }
 

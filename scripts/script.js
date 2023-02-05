@@ -162,11 +162,13 @@ function squareRoot(num){ /*very simple, raises the input to the*/
     displayValue = (Math.pow(num, 0.5).toString());
 }
 
-function logBaseTen(num){ //works just like the 'log' button on an actual calculator. Returns log(x) / log(10)
+function logBaseTen(num){ //works just like the 'log' button on
+                    // an actual calculator. Returns log(x) / log(10)
     displayValue =(Math.log(num)/Math.log(10)).toString();
 }
 
-function modulo(x,y){ //modulo operation, divides x by y, then returns the remainder
+function modulo(x,y){ //modulo operation, divides x by y, 
+                        //then returns the remainder
     return x%y;
 }
 
