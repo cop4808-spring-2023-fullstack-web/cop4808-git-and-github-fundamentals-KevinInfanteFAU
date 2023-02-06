@@ -1,6 +1,8 @@
 # Kevin Infante
 
 # CALC YA LATER
+gif: https://imgur.com/a/QXuSEB2
+note: gif is about 47 seconds long.
 
 This is a calculator web application. To make calculations, click on a number for the first operand, then click on an operator, then click on another number for the second operand, then click the equals = sign. Some of the buttons only require one operand, for example the (+/-) button will change the sign of the last-clicked operand. The (%) button will divide the last-clicked operand by 100, and return the output. The "AC" button will clear the input, and reset the operands and operators.
 
